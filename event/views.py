@@ -13,9 +13,9 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.renderers import BrowsableAPIRenderer, BaseRenderer
 
-from blog.email import trigger_email
-from blog.models import AppUser, Event, Employee
-from blog.serializers import LoginSerializer, UserSerializer, EventSerializer
+from event.email import trigger_email
+from event.models import AppUser, Event, Employee
+from event.serializers import LoginSerializer, UserSerializer, EventSerializer
 
 
 # Create your views here.
@@ -52,7 +52,7 @@ class EventViewSet(viewsets.ModelViewSet):
         for instance in queryset:
             execution_time = instance.date
             instance_type = instance.event_type
-            sc_instance = Schedule.objects.create(func='blog.task.send_email',
+            sc_instance = Schedule.objects.create(func='event.task.send_email',
                                                   # args=instance.id,
                                                   kwargs={'event_type': instance_type, "instance_id": instance.id},
                                                   schedule_type='O',

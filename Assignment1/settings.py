@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-AUTH_USER_MODEL = 'blog.AppUser'
+AUTH_USER_MODEL = 'event.AppUser'
 
 # Application definition
 
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'django_filters',
-    'blog',
+    'event',
     'django_q'
 
 ]

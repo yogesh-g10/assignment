@@ -3,7 +3,7 @@ from rest_framework import serializers
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework_simplejwt.serializers import PasswordField
 
-from blog.models import AppUser, Event
+from event.models import AppUser, Event
 
 
 class LoginSerializer(serializers.Serializer):

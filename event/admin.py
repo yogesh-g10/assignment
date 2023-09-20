@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from blog.models import AppUser, Event, Employee
+from event.models import AppUser, Event, Employee
 
 
 # Register your models here.

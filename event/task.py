@@ -1,7 +1,7 @@
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 
-from blog.models import Event, AppUser, Employee
+from event.models import Event, AppUser, Employee
 
 
 def send_email(*args, **kwargs):
